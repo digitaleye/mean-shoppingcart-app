@@ -26,7 +26,9 @@ app.use('/api/users', require('./controllers/api/users.controller'));
 app.use('/api/shopping', require('./controllers/api/shopping.controller'));
 
 // make '/app' default route
-
+app.get('/', function (req, res) {
+    return res.redirect('/app');
+});
 
 // start server
 var server = app.listen(3000, function () {

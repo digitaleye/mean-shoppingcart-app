@@ -17,7 +17,13 @@
                 templateUrl: 'account/index.html',
                 controller: 'Account.IndexController',
                 data: { activeTab: 'account' }
-            });
+            })
+            .state('cart', {
+                url: '/cart',
+                templateUrl: 'cart/index.html',
+                controller: 'Cart.IndexController',
+                data: { activeTab: 'cart' }
+        });
     });
 
     app.run(function($http, $rootScope, $window){

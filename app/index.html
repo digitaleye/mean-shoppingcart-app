@@ -14,6 +14,10 @@
             <li ng-class="{active: activeTab === 'home'}"><a ui-sref="home">Home</a></li>
             <li ng-class="{active: activeTab === 'account'}"><a ui-sref="account">Account</a></li>
             <li><a href="/login" target="_self">Logout</a></li>
+            <li class="pull-right" ng-class="{active: activeTab === 'cart'}"><a ui-sref="cart" ><ngcart-summary template-url="/ng-cart/summary.html"></ngcart-summary></a></li>
+
+
+
         </ul>
         <div class="flash-message" ng-if="flash">
             <div class="{{'alert alert-' + flash.type}}" ng-bind="flash.message"></div>
@@ -39,5 +43,6 @@
     <script src="app-services/shopping.service.js"></script>
     <script src="home/index.controller.js"></script>
     <script src="account/index.controller.js"></script>
+    <script src="cart/index.controller.js"></script>
 </body>
 </html>
