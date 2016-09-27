@@ -13,6 +13,10 @@
 
         $scope.user = null;
 
+        $scope.HelmetsCategory = [];
+        $scope.BallsCategory = [];
+        $scope.BottlesCategory = [];
+
         initController();
 
         function initController() {
@@ -23,7 +27,23 @@
 
             ShoppingService.getItems().then(function (items){
                 $scope.items = items;
-                console.log($scope.items);
+
+                for(var i=0; i <items.length; i++)
+
+                    if(items[i].Category === "Balls"){
+                        $scope.BallsCategory.push(items[i]);
+                    }
+                    else if(items[i].Category === "Helmets"){
+                        $scope.HelmetsCategory.push(items[i]);
+                    }
+                    else if(items[i].Category === "Bottles"){
+                        $scope.BottlesCategory.push(items[i]);
+                    }
+
+
+                console.log($scope.BallsCategory);
+                console.log($scope.HelmetsCategory);
+                console.log($scope.BottlesCategory);
             })
 
         }

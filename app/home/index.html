@@ -1,12 +1,11 @@
 ﻿
-<h3>Add to Cart <span>(ngcart-addtocart)</span></h3>
-
-
 <h1>Hi {{user.firstName}}!!</h1>
-
+<br>
+<br>
     <div class="container">
     <div class="row">
-        <div class="col-sm-4 col-md-3" ng-repeat="I in items">
+        <h3>Balls Category</h3>
+        <div class="col-sm-4 col-md-3" ng-repeat="I in BallsCategory">
             <div class="thumbnail">
                 <img src="public/images/{{I.image}}" alt="...">
                 <div class="caption">
@@ -16,4 +15,31 @@
             </div>
         </div>
     </div>
+        <hr />
+    <div class="row">
+        <h3>Helmets Category</h3>
+        <div class="col-sm-4 col-md-3" ng-repeat="I in HelmetsCategory">
+            <div class="thumbnail">
+                <img src="public/images/{{I.image}}" alt="...">
+                <div class="caption">
+                    <h3>{{I.name}} - ${{I.price}}</h3>
+                    <ngcart-addtocart id="{{I._id}}" name="{{I.name}}" price="{{I.price}}" quantity="1" quantity-max="10">Add to Cart</ngcart-addtocart>
+                </div>
+            </div>
+        </div>
+    </div>
+        <hr/>
+    <div class="row">
+        <h3>Bottles Category</h3>
+        <div class="col-sm-4 col-md-3" ng-repeat="I in BottlesCategory">
+            <div class="thumbnail">
+                <img src="public/images/{{I.image}}" alt="...">
+                <div class="caption">
+                    <h3>{{I.name}} - ${{I.price}}</h3>
+                    <ngcart-addtocart id="{{I._id}}" name="{{I.name}}" price="{{I.price}}" quantity="1" quantity-max="10">Add to Cart</ngcart-addtocart>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>

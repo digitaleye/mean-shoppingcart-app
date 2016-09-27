@@ -22,7 +22,8 @@ var shoppingSchema = new Schema({
     itemId    : ObjectId,
     name      : String,
     price     : Number,
-    image     : String
+    image     : String,
+    category  : String
 });
 
 //console.log(shoppingSchema);
